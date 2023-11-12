@@ -13,7 +13,7 @@
 //class Matrix to display game field
 template<typename T>
 class Matrix {
-private:
+protected:
     size_t _rows;
     size_t _columns;
     Vector<Vector<T>> _matrix;
