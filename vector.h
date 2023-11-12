@@ -55,7 +55,7 @@ public:
     }
 
     //Move assignment operation
-    Vector &operator=(Vector &&vector) noexcept {
+    Vector &operator=(Vector &&vector)noexcept {
         delete[] _data;
         _size = vector._size;
         _data = vector._data;
@@ -69,7 +69,7 @@ public:
     }
 
     //Getter of _size
-    [[nodiscard]] size_t getSize() const {
+    [[nodiscard]] size_t getSize()const {
         return _size;
     }
 

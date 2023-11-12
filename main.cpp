@@ -3,8 +3,10 @@
 #include "life_game.h"
 
 int main() {
-    LifeGame lifeGame{9, 12, ' ', '@'};
-    std::cout << lifeGame;
+    std::cout << "LIFE GAME:\n";
+    LifeGame lifeGame{6,12, ' ', '@'};
+    lifeGame.start_game();
 
     return 0;
 }
+    

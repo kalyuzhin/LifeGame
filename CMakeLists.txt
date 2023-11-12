@@ -7,4 +7,5 @@ add_executable(ExtraTask2 main.cpp
         matrix.h
         vector.h
         life_game.h
+        life_game.cpp
 )

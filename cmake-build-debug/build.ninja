@@ -55,6 +55,12 @@ build CMakeFiles/ExtraTask2.dir/main.cpp.o: CXX_COMPILER__ExtraTask2_unscanned_D
   OBJECT_DIR = CMakeFiles/ExtraTask2.dir
   OBJECT_FILE_DIR = CMakeFiles/ExtraTask2.dir
 
+build CMakeFiles/ExtraTask2.dir/life_game.cpp.o: CXX_COMPILER__ExtraTask2_unscanned_Debug /Users/kalyuzhin/Developer/CLionProjects/ExtraTask2/life_game.cpp || cmake_object_order_depends_target_ExtraTask2
+  DEP_FILE = CMakeFiles/ExtraTask2.dir/life_game.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/ExtraTask2.dir
+  OBJECT_FILE_DIR = CMakeFiles/ExtraTask2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ExtraTask2
@@ -63,7 +69,7 @@ build CMakeFiles/ExtraTask2.dir/main.cpp.o: CXX_COMPILER__ExtraTask2_unscanned_D
 #############################################
 # Link the executable ExtraTask2
 
-build ExtraTask2: CXX_EXECUTABLE_LINKER__ExtraTask2_Debug CMakeFiles/ExtraTask2.dir/main.cpp.o
+build ExtraTask2: CXX_EXECUTABLE_LINKER__ExtraTask2_Debug CMakeFiles/ExtraTask2.dir/main.cpp.o CMakeFiles/ExtraTask2.dir/life_game.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6
   OBJECT_DIR = CMakeFiles/ExtraTask2.dir
   POST_BUILD = :

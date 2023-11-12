@@ -56,6 +56,23 @@ public:
         return *this;
     }
 
+    //Move assignment operation
+//    Matrix &operator=(Matrix &&matrix) noexcept {
+//        if (this != &matrix) {
+//            _rows = std::move(matrix._rows);
+//            _columns = std::move(matrix._columns);
+//            _matrix = std::move(matrix._matrix);
+//            matrix._rows = 0;
+//            matrix._columns = 0;
+//        }
+//        return *this;
+//    }
+
+    ~Matrix() {
+
+    }
+
+
     T &operator()(size_t i, size_t j) const {
         return _matrix[i][j];
     }
