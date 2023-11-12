@@ -55,7 +55,13 @@ void LifeGame::start_game() {
     while (true) {
         this->display_field();
         std::this_thread::sleep_for(std::chrono::milliseconds(300));
+#ifdef __APPLE__
         std::system("clear");
+#elif __linux__
+        std::system("clear");
+#elif _WIN32
+        std::system("cls");
+#endif
         this->update_generation();
     }
 }
