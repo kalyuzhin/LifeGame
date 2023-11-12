@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(ExtraTask2 main.cpp
         matrix.h
         vector.h
+        life_game.h
 )

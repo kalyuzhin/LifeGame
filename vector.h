@@ -20,8 +20,7 @@ private:
     T *_data;
 public:
     //Default constructor
-    Vector(size_t size) : _size(size) {
-        _data = new T[size];
+    explicit Vector(size_t size = 0) : _size(size), _data(new T[size]) {
         std::fill(_data, _data + size, T());
     }
 
@@ -40,12 +39,12 @@ public:
     }
 
     //Operator []
-    T &operator[](size_t i) const {
-        return _data[i];
+    T &operator[](size_t index) const {
+        return _data[index];
     }
 
     //Copy assignment operation
-    T &operator=(Vector<T> &other) {
+    Vector &operator=(const Vector<T> &other) {
         if (this != &other) {
             delete[] _data;
             _size = other._size;
@@ -70,16 +69,16 @@ public:
     }
 
     //Getter of _size
-    size_t getSize() const {
+    [[nodiscard]] size_t getSize() const {
         return _size;
     }
 
     //resize operation
-    Vector &resize(size_t size, const T &fill_with = T()) {
+    Vector &resize(size_t size) {
         delete[] _data;
         _size = size;
         _data = new T[_size];
-        std::fill(_data, _data + _size, fill_with);
+        return *this;
     }
 
     //std::cout operation
