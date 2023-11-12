@@ -1,0 +1,40 @@
+# Ignore CMake build directory
+build/
+
+# Ignore Xcode files
+*.xcodeproj/
+*.xcworkspace/
+
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore CMake generated files
+CMakeFiles/
+CMakeScripts/
+CMakeCache.txt
+cmake_install.cmake
+CMakeSettings.json
+CMakeTools.json
+Makefile
+CTestTestfile.cmake
+
+# Ignore compiled binary/executable files
+*.exe
+*.out
+
+# Ignore any local or editor-specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Ignore cmake binary directories
+CMakeLists.txt.user
+
