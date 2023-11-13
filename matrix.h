@@ -68,10 +68,6 @@ public:
 //        return *this;
 //    }
 
-    ~Matrix() {
-
-    }
-
 
     T &operator()(size_t i, size_t j) const {
         return _matrix[i][j];

@@ -8,7 +8,7 @@ void LifeGame::fill_random() {
     std::random_device rd;
     for (size_t i = 0; i != this->_rows; ++i) {
         for (size_t j = 0; j != this->_columns; ++j) {
-            _matrix[i][j] = rd() % 2 == 0 ? _alive_cells : _dead_cells;
+            _matrix[i][j] = rd() % 10 == 0 ? _alive_cells : _dead_cells;
         }
     }
 }
@@ -51,10 +51,25 @@ void LifeGame::display_field() {
     std::cout << *this;
 }
 
+bool LifeGame::is_all_dead() {
+    bool result = true;
+    for (size_t i = 0; i != _rows; ++i) {
+        for (size_t j = 0; j != _columns; ++j) {
+            if (this->operator()(i, j) == _alive_cells) {
+                result = false;
+            }
+        }
+    }
+    return result;
+}
+
 void LifeGame::start_game() {
     while (true) {
         this->display_field();
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        if (is_all_dead()) {
+            break;
+        }
 #ifdef __APPLE__
         std::system("clear");
 #elif __linux__

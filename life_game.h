@@ -27,6 +27,8 @@ private:
 
     void display_field();
 
+    bool is_all_dead();
+
 public:
     explicit LifeGame(size_t rows, size_t columns, const char &dead_cells = '#', const char &alive_cells = '*')
             : Matrix<char>(rows, columns), _dead_cells(dead_cells), _alive_cells(alive_cells) {
