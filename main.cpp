@@ -4,7 +4,10 @@
 
 int main() {
     std::cout << "LIFE GAME:\n";
-    LifeGame lifeGame{6,12, ' ', '@'};
+    size_t height, width;
+    std::cout << "Enter height and width:\n";
+    std::cin >> height >> width;
+    LifeGame lifeGame{height, width, ' ', '@'};
     lifeGame.start_game();
 
     return 0;
